@@ -1,0 +1,76 @@
+<% layout("/layout/boilerplate") %>
+<body>
+    <div class="filters d-flex flex-wrap-nowrap">
+        <div class="filter text-align-center ">
+            <div>
+                <i class="fa-solid fa-fire"></i>
+            </div>
+            <p> trending</p>
+        </div>
+         <div class="filter text-align-center ">
+            <div>
+              <i class="fa-solid fa-bed"></i>
+            </div>
+            <p> Rooms</p>
+        </div>
+         <div class="filter text-align-center ">
+            <div>
+                <i class="fa-solid fa-fire"></i>
+            </div>
+            <p> Iconic Cities</p>
+        </div>
+          <div class="filter text-align-center ">
+            <div>
+                <i class="fa-solid fa-mountain-city"></i>
+            </div>
+            <p> Moutains</p>
+        </div>
+          <div class="filter text-align-center ">
+            <div>
+                <i class="fa-brands fa-fort-awesome"></i>
+            </div>
+            <p> Castles</p>
+        </div>
+          <div  class="filter text-align-center ">
+            <div >
+                <i class="fa-solid fa-person-swimming"></i>
+            </div>
+            <p> Amazing Pools</p>
+        </div>
+        <div class="filter text-align-center ">
+            <div>
+              <i class="fa-solid fa-tents"></i>
+            </div>
+            <p> Camping</p>
+        </div>
+          <div class="filter text-align-center ">
+            <div>
+              <i class="fa-solid fa-wheat-awn"></i>
+            </div>
+            <p> Farm</p>
+        </div>
+          <div  class="filter text-align-center ">
+            <div >
+                <i class="fa-solid fa-snowflake"></i>
+            </div>
+            <p> Artics</p>
+        </div>
+
+    </div>
+    <div class="row row-cols-lg-3 row-cols-lg-2 row-cols-sm-1 mt-3">
+        <% for(let list of allListings) { %>
+            <a href="/listings/<%= list._id %>" class="listings-link">
+                <div class="card col">
+                    <img src="<%= list.image.url && list.image.url ? list.image.url : 'https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg' %>" class="card-img-top" alt="listing image" style="height: 18rem;">
+                    <div class="card-body">
+                        <p class="card-text">
+                            <%= list.title %> <br>
+                            <%= list.price.toLocaleString('en-IN') %>
+                        </p>
+                    </div>
+                </div>
+            </a>
+        <% } %>
+    </div>
+</body>
+

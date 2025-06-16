@@ -1,0 +1,165 @@
+body{
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+  /* font-optical-sizing: auto !important;
+  font-weight: 500 !important;
+  font-style: normal !important; */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{
+    flex: 1;
+}
+.navbar{
+    height: 4rem;
+    background-color: white;
+}
+
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+}
+.nav-link{
+    color: #222222 !important;
+    font-weight: 500 !important;
+    font-size: 18px !important;
+    
+}
+
+.nav-link:hover{
+    /* border-bottom:1px solid red ; */
+    box-shadow: 0 2px 8px rgba(55, 44, 45, 0.2);
+    border-radius: 8%;
+}
+
+
+/* footer */
+
+.f-info{
+    display: flex;
+    flex-direction: column;
+    background-color: #ebebeb;
+    align-items: center;
+    justify-content: center;
+    
+}
+.f-info-social i{
+    margin: .5rem;
+    font-size: 1.3rem;
+    margin-bottom: .5rem;
+}
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+    margin-top: .5rem;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+    color: #222222;
+
+}
+
+/* cards */
+
+.card{
+    border: none !important;
+    margin-bottom: 2rem;
+    /* box-shadow: 0 4px 16px rgba(0,0,0,0.15); */
+    /* border-radius: 1rem !important; */
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+.card:hover {
+    /* box-shadow: 0 12px 32px rgba(0,0,0,0.25), 0 4px 12px rgba(254,66,77,0.15); */
+    transform: translateY(-2px) scale(1.03);
+    /* z-index: 2; */
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important; 
+
+}
+
+.card-body{
+    padding: 0 !important;
+}
+
+.card-text p{
+    font-weight: 400;
+}
+.listings-link{
+    text-decoration: none;
+}
+
+/* card - overlay */
+
+.card-img-overlay{
+    opacity: 0;
+}
+
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+
+.form-label{
+    font-weight: 550;
+}
+
+/* show image\ */
+
+.show-img{
+    height: 40vh;
+}
+
+.show-link-btn{
+    text-decoration: none;
+    color: white;
+   
+}
+
+.card-btn.btn {
+    width: 120px;  /* Adjust as needed */
+    text-align: center;
+}
+
+/* card review */
+.card-review{
+    border: 2px black solid;
+}
+
+#map { 
+   height : 50vh;
+   width: 80vh; 
+   border-radius: 8%;
+}
+
+
+
+
+
+
+.filter{
+   margin-right: 2rem;
+   text-align: center;
+    opacity: .7;
+    transition: transform 0.2s;
+}
+
+.filter:hover {
+ opacity: 1;
+ cursor: pointer;
+ transform: translateY(-2px) scale(1.02);
+
+}
+
+.dropdown-content {
+    display: none;
+    margin-bottom: 10px;
+}
+.dropdown-content.active {
+    display: block;
+    margin-bottom: 50px;
+}
